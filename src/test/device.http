@@ -1,0 +1,24 @@
+@url = https://psychic-space-capybara-vp6559wjjp36qx7-8080.app.github.dev
+
+GET {{url}}/api/devices
+
+###
+POST {{url}}/api/devices
+Content-Type: application/json
+
+{
+    "id" : "DEVICE001"
+}
+
+###
+GET {{url}}/api/devices/DEVICE001/data
+
+###
+POST {{url}}/api/devices/DEVICE001/data
+Content-Type: application/json
+
+{
+    "type" : "LIGHT",
+    "value" : 50,
+    "device" : {"id" : "DEVICE001"}
+}
